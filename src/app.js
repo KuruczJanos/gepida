@@ -1,4 +1,12 @@
-
+/*
+* File: app.js
+* Author: Kurucz János
+* Copyright: 2023, Kurucz János
+* Group: Szoft 1/I/E
+* Date: 2023-03-11
+* Github: https://github.com/KuruczJanos/gepida.git
+* Licenc: GNU GPL
+*/
 const gepidaTorzs = document.querySelector("#gepidaTorzs");
 const nameInput = document.querySelector("#name");
 const tyresInput = document.querySelector("#tyres");
