@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gepida</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gepida</h1>
+        
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" 
+        data-bs-toggle="modal" data-bs-target="#addModal">
+            Hozzáad
+        </button>
+
+        <table id="gepidaTabla" 
+        class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Azonosító</th>
+                    <th>Név</th>
+                    <th>Kerék</th>
+                    <th>Használat</th>
+                    <th>Ár</th>
+                </tr>
+            </thead>
+            <tbody id="gepidaTorzs">
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+  
+  <!-- Hozzáad Modal ablak -->
+  <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Dolgozó hozzáadása
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         
+
+
+          <div class="addForm">
+            
+            <div class="mt-3">
+                <input type="text" placeholder="név"
+                id="name" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input type="text" placeholder="település"
+                id="tyres" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input type="text" placeholder="fizetés"
+                id="use" class="form-control">
+            </div>
+            <div class="mt-3">
+              <input type="text" placeholder="fizetés"
+              id="price" class="form-control">
+          </div>
+
+        </div>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" 
+          data-bs-dismiss="modal">Bezár</button>
+
+          <button type="button" class="btn btn-primary"
+          id="addButton"
+          data-bs-dismiss="modal">Mentés</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <!-- Módosítás Modal ablak -->
+  <div class="modal fade" id="modifyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Gepida módósítása
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         
+
+
+          <div class="modifyForm">
+            
+            <div class="mt-3">
+                <input type="text" readonly
+                id="modifyId" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input type="text" placeholder="Név"
+                id="modifyName" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input type="text" placeholder="Kerekek száma"
+                id="modifyTyres" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input type="text" placeholder="Használat"
+                id="modifyUse" class="form-control">
+            </div>
+            <div class="mt-3">
+              <input type="text" placeholder="Ár"
+              id="modifyPrice" class="form-control">
+          </div>
+
+        </div>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" 
+          data-bs-dismiss="modal">Bezár</button>
+
+          <button type="button" class="btn btn-primary"
+          id="saveButton"
+          data-bs-dismiss="modal">Mentés</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+</body>
+</html>
